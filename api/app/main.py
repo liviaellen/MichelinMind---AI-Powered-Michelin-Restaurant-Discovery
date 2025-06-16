@@ -25,8 +25,7 @@ async def root():
     }
 
 # Import and include routers
-from .routes import restaurants, search, recommendations
+from .routes import restaurants, search
 
 app.include_router(restaurants.router, prefix="/api/v1/restaurants", tags=["restaurants"])
 app.include_router(search.router, prefix="/api/v1/search", tags=["search"])
-app.include_router(recommendations.router, prefix="/api/v1/recommendations", tags=["recommendations"])
